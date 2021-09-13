@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>Money Making Simulator</AssemblyName>
+    <RootNamespace>Money Making Simulator</RootNamespace>
+    <StartupObject>Gamethatyoucanusecommands.Program</StartupObject>
+    <ApplicationIcon>MoneyMaker.ico</ApplicationIcon>
+  </PropertyGroup>
+
+</Project>
