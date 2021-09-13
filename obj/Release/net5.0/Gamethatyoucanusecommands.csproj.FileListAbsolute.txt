@@ -1,0 +1,16 @@
+D:\Code\Gamethatyoucanusecommands\bin\Release\net5.0\Money Making Simulator.exe
+D:\Code\Gamethatyoucanusecommands\bin\Release\net5.0\Money Making Simulator.deps.json
+D:\Code\Gamethatyoucanusecommands\bin\Release\net5.0\Money Making Simulator.runtimeconfig.json
+D:\Code\Gamethatyoucanusecommands\bin\Release\net5.0\Money Making Simulator.runtimeconfig.dev.json
+D:\Code\Gamethatyoucanusecommands\bin\Release\net5.0\Money Making Simulator.dll
+D:\Code\Gamethatyoucanusecommands\bin\Release\net5.0\ref\Money Making Simulator.dll
+D:\Code\Gamethatyoucanusecommands\bin\Release\net5.0\Money Making Simulator.pdb
+D:\Code\Gamethatyoucanusecommands\obj\Release\net5.0\Gamethatyoucanusecommands.csproj.AssemblyReference.cache
+D:\Code\Gamethatyoucanusecommands\obj\Release\net5.0\Gamethatyoucanusecommands.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\Gamethatyoucanusecommands\obj\Release\net5.0\Gamethatyoucanusecommands.AssemblyInfoInputs.cache
+D:\Code\Gamethatyoucanusecommands\obj\Release\net5.0\Gamethatyoucanusecommands.AssemblyInfo.cs
+D:\Code\Gamethatyoucanusecommands\obj\Release\net5.0\Gamethatyoucanusecommands.csproj.CoreCompileInputs.cache
+D:\Code\Gamethatyoucanusecommands\obj\Release\net5.0\Money Making Simulator.dll
+D:\Code\Gamethatyoucanusecommands\obj\Release\net5.0\ref\Money Making Simulator.dll
+D:\Code\Gamethatyoucanusecommands\obj\Release\net5.0\Money Making Simulator.pdb
+D:\Code\Gamethatyoucanusecommands\obj\Release\net5.0\Gamethatyoucanusecommands.genruntimeconfig.cache

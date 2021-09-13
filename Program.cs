@@ -18,11 +18,12 @@ namespace Gamethatyoucanusecommands
             string farmJobCommand = "!farmjob";
             string farmJobUserAnswer;
             string farmJobQuestion1 = "Question 1: This is a fruit that is red, round, and big.\nAnswer must always be captilized properly.";
-            string farmJobQuestion2 = "Question 2: This is an animal who's name is sometimes used to describe a person that doesn't want to do something because they are scared of it";
-            string farmJobQuestion3 = "Question 3: This something that all mammals produce and give their young";
+            string farmJobQuestion2 = "Question 2: This is an animal who's name is sometimes used to describe a person that doesn't want to do something because they are scared of it.";
+            string farmJobQuestion3 = "Question 3: This something that all mammals produce and give their young.";
             string farmJobQuestion4 = "Question 4: This is what some animals are born from. We also use it for food and as an ingredient.";
+            string balanceCommand = "!balance";
             int correctFarmAnswers = 0;
-            string allCommands = helpCommand + "\n" + robCommand + " - Note: This is pretty risky\n" + farmJobCommand + " - You take a shift at a farm. The highest you can get is 1K dollars.";
+            string allCommands = helpCommand + "\n" + robCommand + " - Note: This is pretty risky\n" + farmJobCommand + " - You take a shift at a farm. The highest you can get is 1K dollars.\n" + balanceCommand + " - Shows how much money you have.";
             double robPayload;
 
             // Welcoming Message.
@@ -229,8 +230,32 @@ namespace Gamethatyoucanusecommands
                                 }
                             }
                         }
-                    }
 
+                    }
+                    if (correctFarmAnswers == 4)
+                    {
+                        userBalance += 1000;
+                    }
+                    else if (correctFarmAnswers == 3)
+                    {
+                        userBalance += 750;
+                    }
+                    else if (correctFarmAnswers == 2)
+                    {
+                        userBalance += 500;
+                    }
+                    else if (correctFarmAnswers == 1)
+                    {
+                        userBalance += 250;
+                    }
+                    else
+                    {
+                        Console.WriteLine("No money was earned.");
+                    }
+                    Console.WriteLine("Current Balance: " + userBalance);
+                } else if (currentUserMessage == balanceCommand)
+                {
+                    Console.WriteLine(userBalanceDisplay + " " + userBalance);
                 }
             }
         }

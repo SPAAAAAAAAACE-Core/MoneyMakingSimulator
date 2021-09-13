@@ -1,0 +1,5 @@
+D:\Code\Gamethatyoucanusecommands\bin\Release\net5.0\publish\FrameworkDependent\Money Making Simulator.exe
+D:\Code\Gamethatyoucanusecommands\bin\Release\net5.0\publish\FrameworkDependent\Money Making Simulator.dll
+D:\Code\Gamethatyoucanusecommands\bin\Release\net5.0\publish\FrameworkDependent\Money Making Simulator.deps.json
+D:\Code\Gamethatyoucanusecommands\bin\Release\net5.0\publish\FrameworkDependent\Money Making Simulator.runtimeconfig.json
+D:\Code\Gamethatyoucanusecommands\bin\Release\net5.0\publish\FrameworkDependent\Money Making Simulator.pdb
