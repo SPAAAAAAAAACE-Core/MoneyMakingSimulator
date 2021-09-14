@@ -1,6 +1,8 @@
-﻿// Code is by Space Core in 2021.
+﻿// Code and poor quality comments are by Space Core in 2021.
+// Also some code is copied from stackoverflow lmfao.
 // Please do not claim that you have made this.
 using System;
+using System.Threading;
 
 namespace Gamethatyoucanusecommands
 {
@@ -9,8 +11,8 @@ namespace Gamethatyoucanusecommands
         static void Main(string[] args)
         {
             // Declares all needed varibles.
-            // There is alot of varibles.
-            string currentUserMessage = null;
+            // There is a lot of varibles.
+            string currentUserMessage;
             double userBalance = 0;
             string userBalanceDisplay = "Current balance: ";
             string helpCommand = "!help";
@@ -22,10 +24,17 @@ namespace Gamethatyoucanusecommands
             string farmJobQuestion3 = "Question 3: This something that all mammals produce and give their young.";
             string farmJobQuestion4 = "Question 4: This is what some animals are born from. We also use it for food and as an ingredient.";
             string balanceCommand = "!balance";
-            string spellerJobCommand = "!spelljob";
+            string spellerTourmCommand = "!spelltourm";
+            int wordsSpelledRight = 0;
             int correctFarmAnswers = 0;
-            string allCommands = helpCommand + "\n" + robCommand + " - Note: This is pretty risky\n" + farmJobCommand + " - You take a shift at a farm. The highest you can get is 1K dollars.\n" + balanceCommand + " - Shows how much money you have.\n";
+            string allCommands = helpCommand + "\n" + robCommand + " - Note: This is pretty risky\n" + farmJobCommand + " - You take a shift at a farm. The highest you can get is 1K dollars.\n" + balanceCommand + " - Shows how much money you have.\n" + spellerTourmCommand + " - Spelling Tourmanent, prize is 3K";
             double robPayload;
+            // Used for checking the current message made by the player faster.
+            // Got sick of having to type all that.
+            void CheckUserMessage()
+            {
+                currentUserMessage = (Console.ReadLine());
+            }
 
             // Welcoming Message.
             Console.WriteLine("Welcome!\nThis is a game where you can use commands to do stuff.\nThe goal of the game is to reach 10K dollars.\nType \"!help\" for a list of commands.");
@@ -33,7 +42,9 @@ namespace Gamethatyoucanusecommands
             // Makes the game happen while the player doesn't have 10K.
             while (userBalance != 10000)
             {
-                Random rand = new Random();
+                // Generates all the stuff for robbing.
+                // It would be better in the first else if but I'm to lazy to move it.
+                Random rand = new();
                 robPayload = rand.Next(-500, 500);
                 currentUserMessage = (Console.ReadLine());
                 if (currentUserMessage == helpCommand)
@@ -258,12 +269,139 @@ namespace Gamethatyoucanusecommands
                 } else if (currentUserMessage == balanceCommand)
                 {
                     Console.WriteLine(userBalanceDisplay + " " + userBalance);
-                } else
+                } 
+                // Spelling Tourmanent.
+                // This took 1 hour probably cause I figured out that I didn't have to code every single possible order of answering.
+                else if (currentUserMessage == spellerTourmCommand)
+                {
+                    Console.WriteLine("You have entered the Spelling Tourmanent! All answers must be captilized.");
+                    Console.WriteLine("Memorize this word: Democracy");
+                    Thread.Sleep(2500);
+                    Console.SetCursorPosition(0, Console.CursorTop - 1);
+                    RemoveCurrentConsoleLine();
+                    currentUserMessage = (Console.ReadLine());
+                    if (currentUserMessage == "Democracy") // I just noticed while coding this that if i just needed to use 8 if's and 4 else's in the farm job code. PAIN
+                    {
+                        wordsSpelledRight++;
+                        Console.WriteLine("Correct!");
+                    } else
+                    {
+                        Console.WriteLine("Wrong.");
+                    }
+                    Console.WriteLine("Memorize this word: Split");
+                    Thread.Sleep(2500);
+                    Console.SetCursorPosition(0, Console.CursorTop - 1);
+                    RemoveCurrentConsoleLine();
+                    CheckUserMessage();
+                    if (currentUserMessage == "Split")
+                    {
+                        wordsSpelledRight++;
+                        Console.WriteLine("Correct!");
+                    } else
+                    {
+                        Console.WriteLine("Wrong.");
+                    }
+                    Console.WriteLine("Memorize this word: Audacity");
+                    Thread.Sleep(2500);
+                    Console.SetCursorPosition(0, Console.CursorTop - 1);
+                    RemoveCurrentConsoleLine();
+                    CheckUserMessage();
+                    if (currentUserMessage == "Audacity")
+                    {
+                        wordsSpelledRight++;
+                        Console.WriteLine("Correct!");
+                    } else
+                    {
+                        Console.WriteLine("Wrong");
+                    }
+                    Console.WriteLine("Memorize this word: Hypocritical");
+                    Thread.Sleep(2500);
+                    Console.SetCursorPosition(0, Console.CursorTop - 1);
+                    RemoveCurrentConsoleLine();
+                    CheckUserMessage();
+                    if (currentUserMessage == "Hypocritical")
+                    {
+                        wordsSpelledRight++;
+                        Console.WriteLine("Correct!");
+                    } else
+                    {
+                        Console.WriteLine("Wrong.");
+                    }
+                    Console.WriteLine("Memorize this word: Blending");
+                    Thread.Sleep(2500);
+                    Console.SetCursorPosition(0, Console.CursorTop - 1);
+                    RemoveCurrentConsoleLine();
+                    CheckUserMessage();
+                    if (currentUserMessage == "Blending")
+                    {
+                        wordsSpelledRight++;
+                        Console.WriteLine("Correct!");
+                    } else
+                    {
+                        Console.WriteLine("Wrong.");
+                    }
+                    Console.WriteLine("Memorize this word: Project");
+                    Thread.Sleep(2500);
+                    Console.SetCursorPosition(0, Console.CursorTop - 1);
+                    RemoveCurrentConsoleLine();
+                    CheckUserMessage();
+                    if (currentUserMessage == "Project")
+                    {
+                        wordsSpelledRight++;
+                        Console.WriteLine("Correct!");
+                    } else
+                    {
+                        Console.WriteLine("Wrong.");
+                    }
+                    Console.WriteLine("This is the end of the Tourmanent.");
+                    if (wordsSpelledRight == 6)
+                    {
+                        userBalance += 2000;
+                        Console.WriteLine("You placed 1st place of 7 and won 2K");
+                    } else if (wordsSpelledRight == 5)
+                    {
+                        userBalance += 1666;
+                        Console.WriteLine("You placed 2nd place of 7 and won 1,666");
+                    } else if (wordsSpelledRight == 4)
+                    {
+                        userBalance += 1333;
+                        Console.WriteLine("You placed 3rd place of 7 and won 1,333");
+                    } else if (wordsSpelledRight == 3)
+                    {
+                        userBalance += 1000;
+                        Console.WriteLine("You placed 4th place of 7 and won 1K");
+                    } else if (wordsSpelledRight == 2)
+                    {
+                        userBalance += 500;
+                        Console.WriteLine("You placed 5th place of 7 and won 500");
+                    } else if (wordsSpelledRight == 1)
+                    {
+                        userBalance += 250;
+                        Console.WriteLine("You placed 6th place of 7 and won 250");
+                    } else if (wordsSpelledRight == 0)
+                    {
+                        Console.WriteLine("You placed last place and won 250");
+                    } else
+                    {
+                        Console.WriteLine("Something went wrong.");
+                    }
+                    Console.WriteLine(userBalanceDisplay + userBalance);
+                } 
+                else
                 {
                     Console.WriteLine("Not a command.");
                 }
             }
         }
+        // Used for removing the most recent message in the console.
+        public static void RemoveCurrentConsoleLine()
+        {
+            int currentCursorLine = Console.CursorTop;
+            Console.SetCursorPosition(0, Console.CursorTop);
+            Console.Write(new string(' ', Console.WindowWidth));
+            Console.SetCursorPosition(0, currentCursorLine);
+        }
+        
     }
 
 }
