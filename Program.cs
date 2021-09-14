@@ -22,8 +22,9 @@ namespace Gamethatyoucanusecommands
             string farmJobQuestion3 = "Question 3: This something that all mammals produce and give their young.";
             string farmJobQuestion4 = "Question 4: This is what some animals are born from. We also use it for food and as an ingredient.";
             string balanceCommand = "!balance";
+            string spellerJobCommand = "!spelljob";
             int correctFarmAnswers = 0;
-            string allCommands = helpCommand + "\n" + robCommand + " - Note: This is pretty risky\n" + farmJobCommand + " - You take a shift at a farm. The highest you can get is 1K dollars.\n" + balanceCommand + " - Shows how much money you have.";
+            string allCommands = helpCommand + "\n" + robCommand + " - Note: This is pretty risky\n" + farmJobCommand + " - You take a shift at a farm. The highest you can get is 1K dollars.\n" + balanceCommand + " - Shows how much money you have.\n";
             double robPayload;
 
             // Welcoming Message.
@@ -252,10 +253,14 @@ namespace Gamethatyoucanusecommands
                     {
                         Console.WriteLine("No money was earned.");
                     }
+                    correctFarmAnswers = 0;
                     Console.WriteLine("Current Balance: " + userBalance);
                 } else if (currentUserMessage == balanceCommand)
                 {
                     Console.WriteLine(userBalanceDisplay + " " + userBalance);
+                } else
+                {
+                    Console.WriteLine("Not a command.");
                 }
             }
         }
